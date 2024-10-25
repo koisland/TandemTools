@@ -9,8 +9,8 @@ from Bio import SeqIO
 import numpy as np
 
 from config import *
-from scripts.reporting import make_plot
-from scripts.utils import rev_comp, get_kmers_positions, get_fasta_len
+from .reporting import make_plot
+from .utils import rev_comp, get_kmers_positions, get_fasta_len
 
 
 def draw_plot(assembly_fname, label, kmers, plot_fname, kmers_type):

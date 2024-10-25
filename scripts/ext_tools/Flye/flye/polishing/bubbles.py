@@ -10,17 +10,15 @@ from __future__ import absolute_import
 from __future__ import division
 import logging
 from bisect import bisect
-from ext_tools.Flye.flye.six.moves import range
 
 import multiprocessing
 import signal
 
-import ext_tools.Flye.flye.utils.fasta_parser as fp
-import ext_tools.Flye.flye.config.py_cfg as cfg
-from ext_tools.Flye.flye.utils.sam_parser import SynchronizedSamReader
-from ext_tools.Flye.flye.six.moves import zip
+from ..utils import fasta_parser as fp
+from ..config import py_cfg as cfg
+from ..utils.sam_parser import SynchronizedSamReader
 
-from ext_tools.Flye.flye.polishing.alignment import shift_gaps, get_uniform_alignments
+from ..polishing.alignment import shift_gaps, get_uniform_alignments
 
 logger = logging.getLogger()
 

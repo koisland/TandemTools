@@ -15,15 +15,14 @@ from collections import defaultdict
 from os.path import join
 
 from config import KMER_SIZE
-from ext_tools.Flye.flye.polishing.alignment import (make_alignment, get_contigs_info,
+from .alignment import (make_alignment, get_contigs_info,
                                       merge_chunks, split_into_chunks)
-from ext_tools.Flye.flye.utils.sam_parser import SynchronizedSamReader
-from ext_tools.Flye.flye.polishing.bubbles import make_bubbles
-import ext_tools.Flye.flye.utils.fasta_parser as fp
-from ext_tools.Flye.flye.utils.utils import which
-import ext_tools.Flye.flye.config.py_cfg as cfg
-from ext_tools.Flye.flye.six import iteritems
-from ext_tools.Flye.flye.six.moves import range
+from ..utils.sam_parser import SynchronizedSamReader
+from ..polishing.bubbles import make_bubbles
+from ..utils import fasta_parser as fp
+from ..utils.utils import which
+from ..config import py_cfg as cfg
+from ..six import iteritems
 
 from scripts.utils import get_ext_tools_dir
 

@@ -1,7 +1,7 @@
 from os.path import join
 
-from scripts.reporting import make_plot
-from scripts.utils import get_fasta_len
+from .reporting import make_plot
+from .utils import get_fasta_len
 
 
 def calculate_coverage(assembly_len, bed_fname, read_names=None):

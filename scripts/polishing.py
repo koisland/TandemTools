@@ -4,10 +4,10 @@ import sys
 from os.path import exists, join, dirname
 
 import config
-from ext_tools.Flye.flye.polishing.polish import polish
-from scripts import select_kmers
-from scripts.make_alignments import make_flye
-from scripts.utils import get_fasta_len, get_flye_cfg_fname, get_ext_tools_dir
+from .ext_tools.Flye.flye.polishing.polish import polish
+from .select_kmers import do
+from .make_alignments import make_flye
+from .utils import get_fasta_len, get_flye_cfg_fname, get_ext_tools_dir
 
 POLISH_BIN = join(get_ext_tools_dir(), "Flye", "bin", "flye-polish")
 
@@ -26,7 +26,7 @@ def do(assemblies, reads_fname, hifi_reads_fname, out_dir, tmp_dir):
               % (dirname(POLISH_BIN), dirname(dirname(POLISH_BIN))))
         sys.exit(2)
     for i in range(4):
-        select_kmers.do(assemblies, reads_fname, reads_fname, hifi_reads_fname, out_dir, tmp_dir, no_reuse=True, only_polish=True)
+        do(assemblies, reads_fname, reads_fname, hifi_reads_fname, out_dir, tmp_dir, no_reuse=True, only_polish=True)
         for assembly in assemblies:
             print("Polishing genome (%d/%d)" % (i+1, 4))
             assembly.fname = polish(assembly.fname, reads_fname, out_dir, assembly.kmers_fname,

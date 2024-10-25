@@ -13,11 +13,10 @@ from collections import namedtuple
 import subprocess
 import logging
 
-import ext_tools.Flye.flye.utils.fasta_parser as fp
-from ext_tools.Flye.flye.utils.utils import which
-from ext_tools.Flye.flye.utils.sam_parser import AlignmentException, preprocess_sam
-from ext_tools.Flye.flye.six import iteritems
-from ext_tools.Flye.flye.six.moves import range
+from ..utils import fasta_parser as fp
+from ..utils.utils import which
+from ..utils.sam_parser import AlignmentException, preprocess_sam
+from ..six import iteritems
 
 
 logger = logging.getLogger()

@@ -20,8 +20,7 @@ import ctypes
 
 #In Python2, everything is bytes (=str)
 #In Python3, we are doing IO in bytes, but everywhere else strngs = unicode
-from ext_tools.Flye.flye.six import iteritems
-from ext_tools.Flye.flye.six.moves import range
+from ..six import iteritems
 
 if sys.version_info < (3, 0):
     from string import maketrans
@@ -33,7 +32,7 @@ else:
     _BYTES = str.encode
 
 
-import ext_tools.Flye.flye.utils.fasta_parser as fp
+from ..utils import fasta_parser as fp
 
 logger = logging.getLogger()
 

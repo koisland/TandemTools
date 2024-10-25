@@ -8,10 +8,10 @@ from Bio import SeqIO
 from slugify import slugify
 
 from config import *
-from ext_tools.Flye.flye.polishing.polish import ASSEMBLY_BIN
-from scripts.coverage_test import calculate_coverage
-from scripts.reporting import make_plotly_noise
-from scripts.utils import get_fasta_len, get_flye_cfg_fname, rev_comp, get_kmers, run_parallel, get_kmers_positions
+from .ext_tools.Flye.flye.polishing.polish import ASSEMBLY_BIN
+from .coverage_test import calculate_coverage
+from .reporting import make_plotly_noise
+from .utils import get_fasta_len, get_flye_cfg_fname, rev_comp, get_kmers, run_parallel, get_kmers_positions
 
 
 def make_flye():

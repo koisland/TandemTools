@@ -6,8 +6,8 @@ from Bio import SeqIO
 from slugify import slugify
 
 from config import *
-from scripts.reporting import make_plot, draw_report_table
-from scripts.utils import rev_comp, get_kmers, get_fasta_len, get_kmers_positions, cigar_pattern, \
+from .reporting import make_plot, draw_report_table
+from .utils import rev_comp, get_kmers, get_fasta_len, get_kmers_positions, cigar_pattern, \
     get_non_canonical_kmers
 
 

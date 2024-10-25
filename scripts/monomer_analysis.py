@@ -5,10 +5,10 @@ from os.path import join, exists, basename
 from slugify import slugify
 
 from config import *
-from scripts.kmer_analysis import get_kmers_read_pos
-from scripts.reporting import make_plot, make_plotly_html
-from scripts.unit_analysis import analyze_unit_structure
-from scripts.utils import get_monomers_dict, cigar_pattern, get_fasta_len, get_ext_tools_dir
+from .kmer_analysis import get_kmers_read_pos
+from .reporting import make_plot, make_plotly_html
+from .unit_analysis import analyze_unit_structure
+from .utils import get_monomers_dict, cigar_pattern, get_fasta_len, get_ext_tools_dir
 
 decomposer_bin = join(get_ext_tools_dir(), "string_decomposer", "run_decomposer.py")
 

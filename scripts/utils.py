@@ -28,7 +28,7 @@ cigar_pattern = re.compile(r'(\d+[M=XIDNSH])')
 
 
 def get_ext_tools_dir():
-    return abspath(join(dirname(dirname(realpath(__file__))), "ext_tools"))
+    return abspath(join(dirname(realpath(__file__)), "ext_tools"))
 
 
 def get_monomers_dict(monomers_fname):

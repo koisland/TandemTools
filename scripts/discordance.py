@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 from slugify import slugify
 
-from scripts.coverage_test import calculate_coverage
-from scripts.kmer_analysis import get_kmers_read_pos
-from scripts.utils import get_kmers, get_kmers_positions, get_fasta_len
+from .coverage_test import calculate_coverage
+from .kmer_analysis import get_kmers_read_pos
+from .utils import get_kmers, get_kmers_positions, get_fasta_len
 from config import *
 
 

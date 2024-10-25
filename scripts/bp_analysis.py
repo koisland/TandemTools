@@ -4,8 +4,8 @@ import numpy as np
 from Bio import SeqIO
 
 from config import *
-from scripts.reporting import make_plot
-from scripts.utils import get_fasta_len, get_kmers, rev_comp
+from .reporting import make_plot
+from .utils import get_fasta_len, get_kmers, rev_comp
 
 
 def do(assemblies, out_dir):
